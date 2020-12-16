@@ -20,12 +20,7 @@ body {
   padding: 0;
   font-family: var(--ffTitle), sans-serif;
   font-weight: 400;
-}
-@media (min-width: 1200px) {
-  html,
-  body {
-    background-color: #dfc3c3;
-  }
+  background-color: #d1c6c6;
 }
 .noscroll {
   overflow: hidden;
