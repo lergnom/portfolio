@@ -64,39 +64,26 @@
 
 .header-logo {
   position: relative;
+  cursor: default;
   z-index: 2;
   font-size: 42px;
   font-weight: 900;
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 5px;
-    left: -5px;
-    right: 5px;
-    height: 10px;
-    background-color: #fbdc4d;
-    z-index: -1;
-  }
 }
 
 .header-nav {
   display: none;
+  z-index: 0;
   @media (min-width: 576px) {
   }
 
   @media (min-width: 768px) {
-    ul {
-      li {
-        color: red;
-      }
-    }
   }
 
   @media (min-width: 992px) {
     display: block;
     ul {
       li {
+        display: inline-block;
         font-size: 20px;
         color: rgb(0, 0, 0);
         font-weight: 800;
@@ -144,6 +131,12 @@
 
 .header-social-icon {
   margin-right: 20px;
+  a{
+    display: block;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
   &:last-child {
     margin-right: 0;
   }
@@ -152,12 +145,19 @@
 .header-social__linkedin {
   svg {
     width: 28px;
+
+    &:hover {
+      fill: #0e76a8;
+    }
   }
 }
 
 .header-social__vk {
   svg {
     width: 32px;
+    &:hover {
+      fill: #2787f5;
+    }
   }
 }
 
