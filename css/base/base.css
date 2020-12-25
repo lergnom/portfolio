@@ -36,18 +36,6 @@ a:hover {
   text-decoration: none;
   color: #000;
 }
-@media (min-width: 768px) {
-  a,
-  a:hover {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1600px) {
-  a,
-  a:hover {
-    font-size: 24px;
-  }
-}
 ul {
   margin: 0;
   padding: 0;
@@ -128,27 +116,35 @@ button {
   color: var(--colorActiveLink);
   border-bottom: 1px solid var(--colorActiveLink);
 }
-.menu-item {
+.bottom-line {
   position: relative;
 }
-.menu-item:after {
+.bottom-line:after {
   content: "";
   height: 12px;
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 5px;
   z-index: -1;
   background-color: #fbdc4d;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
 }
-.menu-link {
+@media (min-width: 768px) {
+  .bottom-line:after {
+    height: 8px;
+    bottom: 4px;
+  }
+}
+@media (min-width: 1600px) {
+  .bottom-line:after {
+    bottom: 20px;
+    height: 10px;
+  }
+}
+.bottom-line-link {
   position: relative;
 }
-.menu-link:after {
+.bottom-line-link:after {
   content: "";
   height: 6px;
   position: absolute;
@@ -157,13 +153,10 @@ button {
   z-index: -1;
   background-color: #fbdc4d;
 }
-.menu-link:hover:after {
+.bottom-line-link:hover:after {
   width: 100%;
 }
 .btn {
-  height: 64px;
-  width: 255px;
-  font-size: 22px;
   color: #000000;
   font-weight: bold;
   line-height: 1.2;
@@ -173,12 +166,38 @@ button {
           border-radius: 30px;
   background-color: #fbdc4d;
 }
+@media (min-width: 1200px) {
+  .btn {
+    height: 40px;
+    width: 170px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1600px) {
+  .btn {
+    height: 64px;
+    width: 255px;
+    font-size: 22px;
+  }
+}
 .btn.white {
-  width: 190px;
-  height: 64px;
   border-width: 4px;
   border-color: #464646;
   border-style: solid;
   background-color: #fff;
+}
+@media (min-width: 1200px) {
+  .btn.white {
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1600px) {
+  .btn.white {
+    font-size: 22px;
+    width: 190px;
+    height: 64px;
+  }
 }
 /*# sourceMappingURL=base.css.map */
